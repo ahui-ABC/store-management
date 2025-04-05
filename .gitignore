@@ -1,0 +1,57 @@
+### 核心规则 ###
+# Maven 构建输出（保留wrapper）
+target/
+!**/target/classes/   # 允许编译后的类文件
+!.mvn/wrapper/maven-wrapper.jar  # 保留wrapper
+
+# 日志和临时文件
+*.log
+*.tmp
+*.swp
+*.bak
+*.patch
+
+### IntelliJ IDEA ###
+.idea/
+*.iml
+*.ipr
+*.iws
+out/  # 编译输出目录（如果不用Maven构建）
+
+# 但需要保留运行配置（可选）
+!.idea/runConfigurations/
+!.idea/codeStyles/
+
+### 版本控制系统 ###
+.svn/
+.git/
+*.orig  # 合并冲突文件
+
+### 操作系统文件 ###
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Mac
+.DS_Store
+._*
+
+# Linux
+*~
+
+### 开发环境文件 ###
+# 环境变量
+.env
+.env.local
+
+# 本地配置文件（按需调整）
+src/main/resources/application-local*.yml
+src/main/resources/application-dev*.properties
+
+### 特殊例外规则 ###
+# 保留必要的空目录
+!.gitkeep
+
+# Maven包装器例外
+!.mvn/
+.mvn/wrapper/maven-wrapper.properties
