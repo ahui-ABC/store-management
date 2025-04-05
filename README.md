@@ -1,6 +1,6 @@
 # 门店进销管理系统 | Store Management System
 
-![Java](https://img.shields.io/badge/Java-17%2B-blue)
+![Java](https://img.shields.io/badge/Java-8%2B-blue)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.7-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 
