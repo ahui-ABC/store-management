@@ -15,7 +15,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
         <spring-boot.version>2.7.18</spring-boot.version>
-        <mybatis-plus.version>3.5.3.1</mybatis-plus.version>
+        <mybatis-plus.version>3.5.6</mybatis-plus.version>
+        <mysql.version>8.0.33</mysql.version>
     </properties>
 
     <modules>
@@ -23,9 +24,6 @@
         <module>store-dao</module>
         <module>store-service</module>
         <module>store-web</module>
-        <!--        <module>store-dao</module>-->
-<!--        <module>store-service</module>-->
-<!--        <module>store-web</module>-->
     </modules>
 
     <dependencyManagement>
@@ -38,8 +36,45 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
 
             <!-- 其他依赖管理... -->
+            <!-- MyBatis-Plus 生成器核心依赖 -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-core</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-generator</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <!-- Freemarker 模板引擎（即使 scope=provided 也需要编译时依赖） -->
+            <dependency>
+                <groupId>org.freemarker</groupId>
+                <artifactId>freemarker</artifactId>
+                <version>2.3.32</version>
+                <scope>provided</scope> <!-- 确保与运行时环境一致 -->
+            </dependency>
+
+            <!-- MySQL 驱动 -->
+            <dependency>
+                <groupId>com.mysql</groupId>
+                <artifactId>mysql-connector-j</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.30</version> <!-- 建议版本 -->
+                <scope>provided</scope> <!-- 编译时依赖，不打包 -->
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
