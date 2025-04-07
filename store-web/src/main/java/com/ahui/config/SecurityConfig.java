@@ -19,16 +19,17 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Bean  // 关键修复：定义PasswordEncoder Bean
+    @Bean
     public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
+        // 指定BCrypt强度（默认10）
+        return new BCryptPasswordEncoder(12);
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/api/auth/login").permitAll() // 放行登录接口
+                .antMatchers("/api/auth/**").permitAll()
                 .anyRequest().authenticated();
     }
 }

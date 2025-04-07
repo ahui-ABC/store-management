@@ -101,4 +101,10 @@ public class User implements Serializable {
      */
     @TableField("last_login_time")
     private LocalDateTime lastLoginTime;
+
+    /**
+     * 密码算法
+     */
+    @TableField("password_algorithm")
+    private String passwordAlgorithm;
 }

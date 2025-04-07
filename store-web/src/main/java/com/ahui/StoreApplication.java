@@ -13,8 +13,8 @@ import org.springframework.context.annotation.ComponentScan;
  **/
 @SpringBootApplication
 @ComponentScan(basePackages = {
-        "com.ahui.store",
-        "com.ahui.service"
+        "com.ahui",
+        "com.ahui.store"
 })
 @MapperScan("com.ahui.store.mapper")
 public class StoreApplication {
