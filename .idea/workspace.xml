@@ -4,67 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a78bc79f-29ba-4149-b7e2-608110632d16" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/ahui/dto/LoginDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/ahui/dto/LoginResultDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/ahui/dto/MenuNodeDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/ahui/dto/PermissionCheckDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/ahui/dto/UserInfoDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/ahui/result/Result.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/ahui/utils/JwtUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-dao/src/main/java/com/ahui/store/entity/Permission.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-dao/src/main/java/com/ahui/store/entity/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-dao/src/main/java/com/ahui/store/entity/RolePermission.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-dao/src/main/java/com/ahui/store/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-dao/src/main/java/com/ahui/store/entity/UserRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-dao/src/main/java/com/ahui/store/entity/UserSocial.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-dao/src/main/java/com/ahui/store/mapper/PermissionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-dao/src/main/java/com/ahui/store/mapper/RoleMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-dao/src/main/java/com/ahui/store/mapper/RolePermissionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-dao/src/main/java/com/ahui/store/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-dao/src/main/java/com/ahui/store/mapper/UserRoleMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-dao/src/main/java/com/ahui/store/mapper/UserSocialMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-dao/src/main/resources/mapper/system/PermissionMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-dao/src/main/resources/mapper/system/RoleMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-dao/src/main/resources/mapper/system/RolePermissionMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-dao/src/main/resources/mapper/system/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-dao/src/main/resources/mapper/system/UserRoleMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-dao/src/main/resources/mapper/system/UserSocialMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-service/src/main/java/com/ahui/service/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-service/src/main/java/com/ahui/service/PermissionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-service/src/main/java/com/ahui/service/RolePermissionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-service/src/main/java/com/ahui/service/RoleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-service/src/main/java/com/ahui/service/UserRoleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-service/src/main/java/com/ahui/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-service/src/main/java/com/ahui/service/UserSocialService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-service/src/main/java/com/ahui/service/impl/AuthServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-service/src/main/java/com/ahui/service/impl/PermissionServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-service/src/main/java/com/ahui/service/impl/RolePermissionServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-service/src/main/java/com/ahui/service/impl/RoleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-service/src/main/java/com/ahui/service/impl/UserRoleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-service/src/main/java/com/ahui/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-service/src/main/java/com/ahui/service/impl/UserSocialServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-web/src/main/java/com/ahui/StoreApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-web/src/main/java/com/ahui/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-web/src/main/java/com/ahui/config/WebMvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-web/src/main/java/com/ahui/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-web/src/main/java/com/ahui/controller/PermissionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-web/src/main/java/com/ahui/controller/RoleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-web/src/main/java/com/ahui/controller/RolePermissionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-web/src/main/java/com/ahui/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-web/src/main/java/com/ahui/controller/UserRoleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-web/src/main/java/com/ahui/controller/UserSocialController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-web/src/main/java/com/ahui/controller/auth/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-web/src/main/java/com/ahui/interceptor/AuthInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-web/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-web/src/main/resources/static/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store-web/src/test/java/test/CodeGenerator.java" afterDir="false" />
+    <list default="true" id="a78bc79f-29ba-4149-b7e2-608110632d16" name="Changes" comment="commit++">
+      <change afterPath="$PROJECT_DIR$/store-web/src/test/java/test/TestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/ahui/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-dao/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-dao/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-web/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,6 +24,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -184,8 +129,17 @@
       <workItem from="1743817486211" duration="10223000" />
       <workItem from="1743842492991" duration="9529000" />
       <workItem from="1743954285209" duration="894000" />
-      <workItem from="1743955189607" duration="8840000" />
+      <workItem from="1743955189607" duration="10544000" />
     </task>
+    <task id="LOCAL-00001" summary="commit++">
+      <option name="closed" value="true" />
+      <created>1743992684951</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1743992684951</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +147,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="commit++" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit++" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

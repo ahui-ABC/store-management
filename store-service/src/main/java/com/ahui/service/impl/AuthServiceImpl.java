@@ -19,7 +19,7 @@ public class AuthServiceImpl implements AuthService {
     @Autowired
     private UserMapper userMapper;
     @Autowired
-    private PasswordEncoder passwordEncoder;
+    private PasswordEncoder passwordEncoder; // 现在可以正常注入
 
     @Override
     public String login(String username, String password) {
@@ -27,6 +27,6 @@ public class AuthServiceImpl implements AuthService {
         if (user == null || !passwordEncoder.matches(password + user.getSalt(), user.getPassword())) {
             throw new RuntimeException("用户名或密码错误");
         }
-        return JwtUtils.generateToken(username);
+        return JwtUtils.generateToken(username); // 返回JWT
     }
 }
