@@ -20,15 +20,17 @@ import java.util.List;
 public class AuthInterceptor implements HandlerInterceptor {
     @Autowired
     private PermissionService permissionService;
+    @Autowired
+    private JwtUtils jwtUtils;
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
         String token = request.getHeader("Authorization");
-        if (!JwtUtils.validateToken(token)) {
+        if (!jwtUtils.validateToken(token)) {
             throw new RuntimeException("无效Token");
         }
 
-        String username = JwtUtils.getUsernameFromToken(token);
+        String username = jwtUtils.getUsernameFromToken(token);
         List<String> permissions = permissionService.getPermissionsByUsername(username);
 
         String requestURI = request.getRequestURI();

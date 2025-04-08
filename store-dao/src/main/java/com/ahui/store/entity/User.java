@@ -6,6 +6,8 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.List;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -76,7 +78,7 @@ public class User implements Serializable {
      * 状态（0-禁用，1-正常）
      */
     @TableField("status")
-    private Byte status;
+    private Integer status;
 
     /**
      * 部门ID
@@ -107,4 +109,9 @@ public class User implements Serializable {
      */
     @TableField("password_algorithm")
     private String passwordAlgorithm;
+
+    /**
+     * 新增权限/角色字段
+     */
+    private List<String> roles;
 }

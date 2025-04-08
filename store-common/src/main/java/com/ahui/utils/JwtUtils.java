@@ -1,12 +1,14 @@
 package com.ahui.utils;
 
-import io.jsonwebtoken.ExpiredJwtException;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.MalformedJwtException;
-import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.*;
+import io.jsonwebtoken.security.Keys;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+import javax.crypto.SecretKey;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @ClassName JWT工具类$
@@ -15,36 +17,60 @@ import java.util.Date;
  * @Date $ $
  **/
 @Slf4j
+@Component
 public class JwtUtils {
-    private static final String SECRET_KEY = "your-256-bit-secret"; // 替换为实际密钥
-    private static final long EXPIRATION_TIME = 3600 * 1000; // 1小时
 
-    public static String generateToken(String username) {
+    @Value("${jwt.secret}")
+    private String secret;
+
+    @Value("${jwt.expiration}")
+    private Long expiration;
+
+    // 生成安全的密钥
+    private SecretKey getSigningKey() {
+        return Keys.hmacShaKeyFor(secret.getBytes());
+    }
+
+    /**
+     * 生成Token
+     */
+    public String generateToken(String username, List<String> authorities) {
+        Date now = new Date();
+        Date expiryDate = new Date(now.getTime() + expiration * 1000);
+
         return Jwts.builder()
                 .setSubject(username)
-                .setExpiration(new Date(System.currentTimeMillis() + EXPIRATION_TIME))
-                .signWith(SignatureAlgorithm.HS256, SECRET_KEY)
+                .claim("auth", authorities) // 自定义claims
+                .setIssuedAt(now)
+                .setExpiration(expiryDate)
+                .signWith(getSigningKey(), SignatureAlgorithm.HS256)
                 .compact();
     }
 
-    public static String getUsernameFromToken(String token) {
+    /**
+     * 解析并验证Token
+     */
+    public Claims parseToken(String token) {
         return Jwts.parserBuilder()
-                .setSigningKey(SECRET_KEY)
+                .setSigningKey(getSigningKey())
                 .build()
                 .parseClaimsJws(token)
-                .getBody()
-                .getSubject();
+                .getBody();
     }
 
-    public static boolean validateToken(String token) {
+    /**
+     * 验证Token有效性
+     */
+    public boolean validateToken(String token) {
         try {
-            Jwts.parserBuilder().setSigningKey(SECRET_KEY).build().parseClaimsJws(token);
+            parseToken(token);
             return true;
-        } catch (ExpiredJwtException e) {
-            log.error("Token已过期", e);
-        } catch (MalformedJwtException e) {
-            log.error("Token格式错误", e);
+        } catch (JwtException | IllegalArgumentException e) {
+            return false;
         }
-        return false;
+    }
+
+    public String getUsernameFromToken(String token) {
+        return parseToken(token).getSubject();
     }
 }

@@ -18,5 +18,4 @@
         <result column="update_time" property="updateTime" />
         <result column="last_login_time" property="lastLoginTime" />
     </resultMap>
-
 </mapper>

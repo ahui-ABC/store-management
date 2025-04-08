@@ -4,13 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a78bc79f-29ba-4149-b7e2-608110632d16" name="Changes" comment="commit++">
+    <list default="true" id="a78bc79f-29ba-4149-b7e2-608110632d16" name="Changes" comment="登录开发完成">
+      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/ahui/dto/RegisterDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-common/src/main/java/com/ahui/exception/JwtAuthenticationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-web/src/main/java/com/ahui/config/JwtFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store-web/src/main/java/com/ahui/config/LocalRateLimiter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-common/src/main/java/com/ahui/utils/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-common/src/main/java/com/ahui/utils/JwtUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-dao/src/main/java/com/ahui/store/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-dao/src/main/java/com/ahui/store/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-dao/src/main/java/com/ahui/store/mapper/PermissionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-dao/src/main/java/com/ahui/store/mapper/PermissionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-dao/src/main/java/com/ahui/store/mapper/RoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-dao/src/main/java/com/ahui/store/mapper/RoleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-dao/src/main/java/com/ahui/store/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-dao/src/main/java/com/ahui/store/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-dao/src/main/resources/mapper/system/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-dao/src/main/resources/mapper/system/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-service/src/main/java/com/ahui/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-service/src/main/java/com/ahui/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-service/src/main/java/com/ahui/service/impl/AuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-service/src/main/java/com/ahui/service/impl/AuthServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-web/src/main/java/com/ahui/StoreApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-web/src/main/java/com/ahui/StoreApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-service/src/main/java/com/ahui/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-service/src/main/java/com/ahui/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/store-web/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store-web/src/main/java/com/ahui/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-web/src/main/java/com/ahui/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store-web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/store-web/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-web/src/main/java/com/ahui/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-web/src/main/java/com/ahui/config/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-web/src/main/java/com/ahui/controller/auth/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-web/src/main/java/com/ahui/controller/auth/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store-web/src/main/java/com/ahui/interceptor/AuthInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/store-web/src/main/java/com/ahui/interceptor/AuthInterceptor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,37 +66,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.AuthServiceImpl.executor": "Run",
-    "Application.CodeGenerator.executor": "Run",
-    "Maven.store-management [org.apache.maven.plugins:maven-clean-plugin:3.2.0:clean].executor": "Run",
-    "Maven.store-management [org.apache.maven.plugins:maven-install-plugin:3.1.1:install].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.StoreApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/project/store-management/store-service/src/main/java/com/ahui",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2816092",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.AuthServiceImpl.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CodeGenerator.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.store-management [org.apache.maven.plugins:maven-clean-plugin:3.2.0:clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.store-management [org.apache.maven.plugins:maven-install-plugin:3.1.1:install].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.StoreApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/project/store-management/store-service/src/main/java/com/ahui&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2816092&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\project\store-management\store-service\src\main\java\com\ahui" />
@@ -131,8 +145,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.StoreApplication" />
-        <item itemvalue="Application.AuthServiceImpl" />
-        <item itemvalue="Application.CodeGenerator" />
       </list>
     </recent_temporary>
   </component>
@@ -147,7 +159,8 @@
       <workItem from="1743817486211" duration="10223000" />
       <workItem from="1743842492991" duration="9529000" />
       <workItem from="1743954285209" duration="894000" />
-      <workItem from="1743955189607" duration="13688000" />
+      <workItem from="1743955189607" duration="15725000" />
+      <workItem from="1744075650304" duration="3806000" />
     </task>
     <task id="LOCAL-00001" summary="commit++">
       <option name="closed" value="true" />
@@ -165,7 +178,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744000749252</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="登录开发完成">
+      <option name="closed" value="true" />
+      <created>1744004979172</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1744004979172</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,7 +195,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="commit++" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit++" />
+    <MESSAGE value="登录开发完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="登录开发完成" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

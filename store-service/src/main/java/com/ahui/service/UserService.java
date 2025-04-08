@@ -1,5 +1,6 @@
 package com.ahui.service;
 
+import com.ahui.dto.RegisterDTO;
 import com.ahui.store.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -12,5 +13,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2025-04-06
  */
 public interface UserService extends IService<User> {
-
+    void register(RegisterDTO dto);
 }
