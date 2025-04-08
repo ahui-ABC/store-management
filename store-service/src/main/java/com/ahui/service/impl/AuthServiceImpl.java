@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -37,6 +38,7 @@ public class AuthServiceImpl implements AuthService {
     private PermissionMapper permissionMapper;
 
     @Override
+    @Transactional
     public String login(String username, String password) {
         // 1. 基础验证
         User user = userMapper.selectByUsername(username);

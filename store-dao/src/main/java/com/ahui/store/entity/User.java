@@ -44,11 +44,11 @@ public class User implements Serializable {
     @TableField("password")
     private String password;
 
-    /**
-     * 加密盐值
-     */
-    @TableField("salt")
-    private String salt;
+//    /**
+//     * 加密盐值
+//     */
+//    @TableField("salt")
+//    private String salt;
 
     /**
      * 真实姓名

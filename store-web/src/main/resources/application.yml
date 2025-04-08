@@ -2,8 +2,9 @@ server:
   port: 8081
 logging:
   level:
-    org.springframework.context: DEBUG
-    com.ahui.store.mapper: TRACE
+    org.springframework.web: DEBUG
+    org.springframework.security: DEBUG
+    com.ahui: TRACE
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/store_sale_managerment?useSSL=false&serverTimezone=Asia/Shanghai

@@ -38,7 +38,7 @@ public class AuthController {
     }
 
     @PostMapping("/register")
-    public Result<String> register(HttpServletRequest request, @Valid @RequestBody RegisterDTO dto) {
+    public Result<String> register(@Valid @RequestBody RegisterDTO dto) {
         if (!rateLimiter.tryAcquire()) {
             throw new RuntimeException("请求过于频繁，请稍后再试");
         }

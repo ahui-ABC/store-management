@@ -40,6 +40,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             user.setEmail(dto.getEmail());
             user.setMobile(dto.getMobile());
             user.setStatus(1); // 默认启用状态
+//            user.setSalt(11);
 
             // 3. 保存用户
             userMapper.insert(user);

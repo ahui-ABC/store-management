@@ -3,6 +3,7 @@ package com.ahui.store.mapper;
 import com.ahui.store.entity.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
@@ -26,5 +27,5 @@ public interface UserMapper extends BaseMapper<User> {
     boolean existsByUsername(String username);
 
     @Update("UPDATE sys_user SET last_login_time = #{date} WHERE id = #{id}")
-    void updateLastLoginTime(Long id, Date date);
+    void updateLastLoginTime(@Param("id") Long id, @Param("date") Date date);
 }
