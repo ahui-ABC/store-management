@@ -53,13 +53,11 @@ public class AuthServiceImpl implements AuthService {
         }
 
         // 2. 查询权限数据（合并角色和权限标识）
-        List<String> authorities = new ArrayList<>();
 
         // 2.1 获取角色编码（如 ROLE_ADMIN）
         List<String> roleCodes = roleMapper.selectRoleCodesByUserId(user.getId());
-        authorities.addAll(roleCodes.stream()
-                .map(code -> "ROLE_" + code) // Spring Security需要ROLE_前缀
-                .collect(Collectors.toList()));
+        List<String> authorities = roleCodes.stream()
+                .map(code -> "ROLE_" + code).collect(Collectors.toList());
 
         // 2.2 获取权限标识符（如 user:add）
         List<String> permissionCodes = permissionMapper.selectPermissionCodesByUserId(user.getId());
