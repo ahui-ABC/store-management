@@ -1,12 +1,17 @@
 package com.ahui.utils;
 
-import io.jsonwebtoken.*;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.JwtException;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import javax.crypto.SecretKey;
+import java.nio.charset.StandardCharsets;
+import java.util.Base64;
 import java.util.Date;
 import java.util.List;
 
@@ -28,21 +33,27 @@ public class JwtUtils {
 
     // 生成安全的密钥
     private SecretKey getSigningKey() {
-        return Keys.hmacShaKeyFor(secret.getBytes());
+        try {
+            String decodedSecret = new String(Base64.getDecoder().decode(secret), StandardCharsets.UTF_8);
+            if (decodedSecret.length() < 32) {
+                throw new IllegalArgumentException("解码后的密钥长度必须≥32字符");
+            }
+            return Keys.hmacShaKeyFor(decodedSecret.getBytes(StandardCharsets.UTF_8));
+        } catch (IllegalArgumentException e) {
+            log.error("密钥配置错误: {}", e.getMessage());
+            throw new JwtException("JWT密钥初始化失败", e);
+        }
     }
 
     /**
      * 生成Token
      */
     public String generateToken(String username, List<String> authorities) {
-        Date now = new Date();
-        Date expiryDate = new Date(now.getTime() + expiration * 1000);
-
         return Jwts.builder()
                 .setSubject(username)
-                .claim("auth", authorities) // 自定义claims
-                .setIssuedAt(now)
-                .setExpiration(expiryDate)
+                .claim("auth", authorities)
+                .setIssuedAt(new Date())
+                .setExpiration(new Date(System.currentTimeMillis() + expiration)) // 使用配置值
                 .signWith(getSigningKey(), SignatureAlgorithm.HS256)
                 .compact();
     }

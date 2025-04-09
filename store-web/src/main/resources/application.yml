@@ -15,8 +15,8 @@ spring:
     bcrypt:
       strength: 12  # 计算强度（4-31，默认10）
 jwt:
-  secret: "dGhpcy1pcy1hLXNlY3JldC1rZXktZm9yLXRlc3Rpbmc=" # Base64编码示例
-  expiration: 86400
+  secret: "dGhpcy1pcy1hLXN1cGVyLXNlY3VyZS1zZWNyZXQta2V5LTEyMzQ1" # 对应"this-is-a-super-secure-secret-key-12345"（32字节）
+  expiration: 86400000 # 明确使用毫秒单位
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 开启SQL日志

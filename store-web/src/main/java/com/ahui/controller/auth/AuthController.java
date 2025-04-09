@@ -6,11 +6,9 @@ import com.ahui.dto.RegisterDTO;
 import com.ahui.result.Result;
 import com.ahui.service.AuthService;
 import com.ahui.service.UserService;
+import jdk.nashorn.internal.objects.annotations.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -44,5 +42,10 @@ public class AuthController {
         }
         userService.register(dto);
         return Result.success("注册成功");
+    }
+
+    @GetMapping("/testToken")
+    public Result<String> testToken() {
+        return Result.success("访问成功!!");
     }
 }
